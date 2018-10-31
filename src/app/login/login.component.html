@@ -1,0 +1,44 @@
+<div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- añadir responsive col-**-num-->
+            <h1 class="text-white m-4">Sistema de Control para Horarios Laborales</h1>
+        </div>
+    </div>
+    <div class="text-center">
+        <img class="m-4" src="../../assets/boss_128.png" alt="imagen_login">
+    </div>
+    <div class="identity-data" *ngIf="identidad">
+        <div class="user-identity alert alert-success" *ngIf="identidad.email">
+            Bienvenido {{identidad.nombre}}
+        </div>
+
+        <div class="user-identity alert alert-danger" *ngIf="identidad.data">
+            {{identidad.data}}
+        </div>
+    </div>
+    <div class="container">
+        <form action="" #loginForm="ngForm" (ngSubmit)="onSubmit(usuario.email, usuario.password)">
+            <div class="row justify-content-center">
+                <!-- md to > 720px | sm to > 540px-->
+                <div class="form-group col-md-4 col-8">
+                    <input type="email" class="form-control" name="email" ng-model="email" #email="ngModel" ngControl="email" [(ngModel)]="usuario.email"  placeholder="Ingrese su correo electrónico" required>
+                    <span *ngIf="!email.valid">El email es obligatorio</span>
+                </div>
+                
+            </div>
+            <div class="row justify-content-center">
+                <div class="form-group col-md-4 col-8">
+                    <input type="password" class="form-control" name="password" ng-model="password" #password="ngModel" ngControl="password" [(ngModel)]="usuario.password"  placeholder="Ingrese su contraseña" required>
+                    <span *ngIf="!password.valid">La contraseña es obligatoria</span>
+                </div>
+                
+            </div>
+            <div class="row justify-content-center">
+                <div class="form-group col-md-2 col-4">
+                    <button type="submit" class="btn btn-secondary">Iniciar Sesión</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

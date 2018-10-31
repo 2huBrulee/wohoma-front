@@ -1,0 +1,33 @@
+<navbar #barraEmpleados></navbar>
+<div class="container">
+    <div class="row justify-content-center">
+        <!-- añadir responsive col-**-num -->
+        <h1 class="text-white m-4">Empleados</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-end">
+        <div class="">
+            <button type="" class="btn bg-success" [routerLink]="['/empleado/nuevoEmpleado']">Nuevo Empleado</button>
+        </div>
+    </div>
+</div>
+<div ng-hide="isEmpleado">
+    <h3>{{msg}}</h3>
+</div>
+<div class="row" ng-show="isEmpleado">
+    <div class="col-sm-6 col-md-4" *ngFor="let empleado of empleados">
+        <div class="card m-3" style="width: 18rem;">
+            <div class="card-body">
+                <p class="card-text"><b>Nombre: </b>{{empleado.nombre}}</p>
+                <p class="card-text"><b>Apellidos: </b>{{empleado.apellidos}}</p>
+                <p class="card-text"><b>DNI: </b>{{empleado.dni}}</p>
+                <p class="card-text"><b>Celular: </b>{{empleado.celular}}</p>
+                <p class="card-text"><b>Usuario: </b>{{empleado.usuario}}</p>
+                <a [routerLink]="['/empleado/historial', empleado.id_empleado]" class="btn btn-success">Historial</a>
+                <a [routerLink]="['/empleado/editar', empleado.id_empleado]" class="btn btn-warning">Editar</a>
+                <a (click)="onEliminarEmpleado(empleado.id_empleado)" class="btn btn-danger">Eliminar</a>
+            </div>
+        </div>
+    </div>
+</div>

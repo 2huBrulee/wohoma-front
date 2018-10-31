@@ -1,0 +1,26 @@
+<navbar #barraTienda ></navbar>
+<div class="container">
+  <div class="row justify-content-center">
+    <!-- añadir responsive col-**-num -->
+    <h1 class="text-white m-4">Tiendas</h1>
+  </div>
+</div>
+
+<div ng-hide="isData">
+  <h3>{{msg}}</h3>
+</div>
+<div class="row" ng-show="isData">
+  <div class="col-sm-6 col-md-4" *ngFor="let tienda of tiendas">
+    <div class="card m-3" style="width: 18rem;">
+        <div class="card-body">
+            <p class="card-text"><b>{{tienda.nombreTienda}}</b></p>
+            <p class="card-text">DIRECCION: {{tienda.direccion}}</p>
+            <p class="card-text">REFERENCIA: {{tienda.referencia}}</p>
+            <p class="card-text">TELEFONO: {{tienda.telefono}}</p>
+            <a [routerLink]="['/tienda/editar', tienda.id_tienda]" class="btn btn-warning">Editar</a>
+            <a (click)="onEliminarTienda(tienda.id_tienda)" class="btn btn-danger" >Eliminar</a>
+        </div>
+    </div>
+  </div>  
+</div>
+

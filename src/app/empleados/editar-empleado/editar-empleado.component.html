@@ -1,0 +1,98 @@
+<navbar></navbar>
+<div class="container">
+    <div class="row justify-content-center">
+        <!-- añadir responsive col-**-num -->
+        <h1 class="text-white m-4">Editar Empleado</h1>
+    </div>
+</div>
+<div class="container bg-secondary p-3 text-center col-sm-6">
+    <form #formEmpleado="ngForm"(ngSubmit)="editarEmpleado()">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Nombres</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="nombres" name="nombres" #nombres="ngModel" [(ngModel)]="empleado.nombre" placeholder="Nombre(s)">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Apellidos</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="apellidos" name="apellidos" #apellidos="ngModel" [(ngModel)]="empleado.apellidos" placeholder="Apellidos">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">DNI</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="dni" name="dni" #dni="ngModel" [(ngModel)]="empleado.dni" placeholder="DNI">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Telefono</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="telefono" name="telefono" #telefono="ngModel" [(ngModel)]="empleado.telefono" placeholder="Teléfono">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Celular</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="celular" name="celular" #celular="ngModel" [(ngModel)]="empleado.celular" placeholder="Celular">
+                </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Dirección</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="direccion" name="direccion" #direccion="ngModel" [(ngModel)]="empleado.direccion" placeholder="Dirección">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Sueldo</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="sueldo" name="sueldo" #sueldo="ngModel" [(ngModel)]="empleado.sueldo" placeholder="Sueldo">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Usuario</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="usuario" name="usuario" #usuario="ngModel" [(ngModel)]="empleado.usuario" placeholder="Usuario">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Contraseña</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="password" name="password" #password="ngModel" [(ngModel)]="empleado.password" placeholder="Contraseña">
+            </div>
+        </div>
+        <!-- FALTA: TIENDA | lista desplegable | necesita consumir la base de datos-->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Tienda</label>
+            <div class="col-sm-10">
+                <select class="form-control" id="id_tienda" name="id_tienda" #id_tienda="ngModel" [(ngModel)]="empleado.id_tienda" placeholder="id_tienda">
+                    <option selected disabled>Tienda</option>
+                    <option *ngFor="let tienda of tiendas" [ngValue]="tienda.id_tienda"> {{tienda.nombreTienda}} </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Horario</label>
+            <div class="col-sm-10">
+                <select class="form-control" id="id_horario" name="id_horario" #id_horario="ngModel" [(ngModel)]="empleado.id_horario" placeholder="id_horario">
+                    <option selected disabled>Horario</option>
+                    <option selected="">1</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Rol</label>
+            <div class="col-sm-10">
+                <select class="form-control" id="id_rol" name="id_rol" #id_rol="ngModel" [(ngModel)]="empleado.id_rol" placeholder="id_rol">
+                    <option selected disabled>Rol</option>
+                    <option *ngFor="let rol of roles" [ngValue]="rol.id_rol"> {{rol.nombre}} </option>
+                </select>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="form-group col-2">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
+    </form>
+</div>

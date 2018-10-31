@@ -1,0 +1,29 @@
+<navbar #barraPermisos></navbar>
+<div class="container">
+    <div class="row justify-content-center">
+        <!-- añadir responsive col-**-num -->
+        <h1 class="text-white m-4">Permisos</h1>
+    </div>
+</div>
+<div ng-hide="isPermisos">
+  <h3>{{msg}}</h3>
+</div>
+
+<div class="row" ng-show="isPermisos">
+  <div class="col-sm-6 col-md-4" *ngFor="let permiso of permisos">
+      <div class="card m-3" style="width: 18rem;">
+          <div class="card-body">
+              <p class="card-text"><b>Nombre: </b>{{permiso.id_empleado.nombre}}</p>
+              <p class="card-text"><b>Apellidos: </b>{{permiso.id_empleado.apellidos}}</p>
+              <p class="card-text"><b>Celular: </b>{{permiso.id_empleado.celular}}</p>
+              <p class="card-text"><b>Tienda: </b>{{permiso.id_empleado.id_tienda.nombreTienda}}</p>
+              <p class="card-text"><b>Motivo: </b>{{permiso.razon}}</p>
+              <p class="card-text"><b>Desde: </b>{{permiso.fechaInicial}}</p>
+              <p class="card-text"><b>Hasta: </b>{{permiso.fechaFinal}}</p>
+              <p class="card-text"><b>Estado: </b>{{permiso.estado}}</p>
+              <a (click)="onAceptar(permiso.id_permiso)" class="btn btn-success">Aceptar</a>
+              <a (click)="onDenegar(permiso.id_permiso)" class="btn btn-danger">Denegar</a>
+          </div>
+      </div>
+  </div>
+</div>

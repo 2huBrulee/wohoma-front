@@ -1,0 +1,56 @@
+<navbar #barraPrincipal></navbar>
+
+  <div class="row justify-content-center">
+    <!-- añadir responsive col-**-num -->
+    <h1>Sistema de Control para Horarios Laborales</h1>
+  </div>
+
+
+<div class="SplitPane row justify-content-center">
+  <div className="col-xs-6">
+      <div class="module1" [routerLink]="['/tiendas']">
+          <div class="row center-xs">
+              <i class="material-icons">store</i>
+          </div>
+          <div class="row center-xs">
+              <a class="icon-tienda opciones" >Tiendas</a>
+          </div>
+        </div>  
+  </div>
+  <div className="col-xs-6">
+      <div class="module2" [routerLink]="['/empleados']">
+          <div class="row center-xs">
+              <i class="material-icons">group</i>
+          </div>
+          <div class="row center-xs">
+              <a class="icon-empleado opciones" >Empleados</a>
+          </div>
+        </div>  
+  </div>
+  
+</div>
+<div class="SplitPane row justify-content-center">
+    <div className="col-xs-6">
+        <div class="module3" [routerLink]="['/roles']">
+            <div class="row center-xs">
+                <i class="material-icons">person_outline</i>
+            </div>
+            <div class="row center-xs">
+                <a class="icon-roles opciones" >Roles</a>
+            </div>
+          </div>  
+    </div>
+    <div className="col-xs-6">
+        <div class="module4" [routerLink]="['/permisos']">
+            <div class="row center-xs">
+                <i class="material-icons">done_all</i>
+            </div>
+            <div class="row center-xs">
+                <a class="icon-permisos opciones" >Permisos</a>
+            </div>
+          </div>  
+    </div>
+    
+  </div>
+
+

@@ -1,0 +1,62 @@
+.header{
+    background: #797999fa;
+    margin-top: 0px !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+a{
+    padding: 10px;
+    color: #ffffff !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cerrar{
+    border-radius: 10px;
+    opacity: 0.8;
+}
+.topnav {
+    overflow: hidden;
+    background-color: rgb(42, 11, 59);
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color:rgb(102, 32, 139);
+    color: white;
+}
+
+
+.visible{
+    color: white !important;
+    border-radius: 6px;
+}
+
+.invisible{
+    display: none;
+}
+
+/*ESTADO ACTIVO*/
+.activo{
+    background: rgb(102, 32, 139);
+    color: #ffffff !important;
+    border-radius: 5px;
+}
+
+.activo:hover{
+    background: rgb(102, 32, 139);
+    color: #ffffff !important;
+    border-radius: 5px;
+}

@@ -1,0 +1,207 @@
+img{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+}
+
+.d1{
+    margin: 60px auto;
+    width:300px;
+    height: 200px;
+}
+h1{
+    background-color:rgb(181, 185, 185);
+    color: black;
+    padding: 20px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 28px;
+    width : 100%;
+    margin: 0px;
+    width:100%;
+    font-weight: bold;
+    font-family: 'Exo', sans-serif;
+  }
+
+.general{
+    margin: 40px;
+    width: 80%;
+    height: 30%;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px ;
+    display: flex;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.d11{
+    background:rgb(89, 218, 39) ; 
+}
+
+.d12{
+    background:rgb(177, 65, 13) ;
+}
+
+.d13{
+    background:#8d74c9 ;
+}
+.module1{
+    background-color:rgb(43, 102, 46);
+    padding: 10px 20px 8px 20px;
+    color:white;
+    margin:20px;
+    width: 200px;
+    height: 100%;
+    font-weight: bold;
+    border-left: 2px solid rgb(206, 209, 212);
+    border-top: 2px solid  rgb(206, 209, 212);
+    border-right:  4px solid  rgb(206, 209, 212);
+    border-bottom:  4px solid  rgb(206, 209, 212);
+    border-radius: 20px;
+  }
+
+.module1:hover{
+    background-color: rgb(155, 218, 136);
+    cursor: pointer;
+    color:white;
+    box-shadow: 2px 2px ;
+  }
+  .module2{
+    background-color:rgb(201, 79, 23);
+    padding: 10px 20px 8px 20px;
+    margin: 20px;
+    width: 200px;
+    height: 100%;
+    font-weight: bold;
+    border-left: 1px solid rgb(206, 209, 212);
+    border-top: 1px solid  rgb(206, 209, 212);
+    border-right:  3px solid  rgb(206, 209, 212);
+    border-bottom:  3px solid  rgb(206, 209, 212);
+    border-radius: 20px;
+    color:white;
+  }
+  .module2:hover {
+    background-color: rgb(233, 148, 109);
+    cursor: pointer;
+    color:white;
+    box-shadow: 2px 2px ;
+  }
+  .module3{
+    background-color:rgb(48, 6, 68);
+    padding: 10px 20px 8px 20px;
+    margin: 20px;
+    width: 200px;
+    height: 100%;
+    font-weight: bold;
+    border-left: 1px solid rgb(206, 209, 212);
+    border-top: 1px solid  rgb(206, 209, 212);
+    border-right:  3px solid  rgb(206, 209, 212);
+    border-bottom:  3px solid  rgb(206, 209, 212);
+    border-radius: 20px;
+    color:white;
+  }
+  .module3:hover {
+    background-color: rgb(95, 71, 117);
+    cursor: pointer;
+    color:white;
+    box-shadow: 2px 2px ;
+  }
+  .module4{
+    background-color:rgb(18, 77, 100);
+    padding: 10px 20px 8px 20px;
+    margin: 20px;
+    width: 200px;
+    height: 100%;
+    font-weight: bold;
+    border-left: 1px solid rgb(206, 209, 212);
+    border-top: 1px solid  rgb(206, 209, 212);
+    border-right:  3px solid  rgb(206, 209, 212);
+    border-bottom:  3px solid  rgb(206, 209, 212);
+    border-radius: 20px;
+    color:white;
+  }
+  .module4:hover {
+    background-color: rgb(65, 131, 156);
+    cursor: pointer;
+    color:white;
+    box-shadow: 2px 2px ;
+  }
+
+  .centrar{
+    text-align: center;
+    align-content: center;
+  }
+  .SplitPane {
+    width: 100%;
+    height: 100%;
+  }
+.d14{
+    background:#84becf ;
+}
+/* clase para los link <a></a>*/
+.opciones {
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.d11:hover{
+    background:#91CF79 ;
+    opacity: 1;
+    box-shadow: 4px 4px ;
+}
+
+.d12:hover{
+   background:#FFBA5C ;
+    opacity: 1;
+    box-shadow: 4px 4px ;
+}
+
+.d13:hover{
+    background:#7f5cd1 ;
+    opacity: 1;
+    box-shadow: 4px 4px ;
+}
+
+.d14:hover{
+    background:#5d9fb3 ;
+    opacity: 1;
+    box-shadow: 4px 4px ;
+}
+
+/* BOTON CERRAR SESION*/
+.d2{
+    background: black;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    padding: 15px;
+    border-radius: 20px;
+    opacity: 0.8;
+    cursor: pointer;
+    box-shadow: 2px 2px ;
+}
+
+.d2 > a{
+    opacity: 0.9;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.d2:hover{
+    opacity: 1;
+    background:black;
+}
+
+.material-icons{
+    font-size: 90px;
+    color:white;
+  }
+
+  

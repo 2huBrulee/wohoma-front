@@ -1,0 +1,50 @@
+<navbar></navbar>
+<div class="container">
+    <div class="row justify-content-center">
+        <!--a añadir responsive col-**-num-->
+        <h1 class="text-white m-4">Historial de Asistencia</h1>
+    </div>
+    <div *ngIf="!empleado">
+        <p>Cargando...</p>
+    </div>
+    <div *ngIf="empleado" class="row justify-content-sm-center">
+        <form class="col col-md-8 col-sm-12">
+            <div class="form-group row">
+                <label for="" class="col-sm-2 col-form-label">Nombre: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" value="{{empleado.nombre}}" disabled>
+                </div>
+                <label for="" class="col-sm-2 col-form-label">Apellidos: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" value="{{empleado.apellidos}}"disabled>
+                </div>
+                <label for="" class="col-sm-2 col-form-label">DNI: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" value="{{empleado.dni}}" disabled>
+                </div>
+                <label for="" class="col-sm-2 col-form-label">Usuario: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" value="{{empleado.usuario}}" disabled>
+                </div>
+            </div>
+        </form>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora de entrada</th>
+                    <th>Hora de salida</th>
+                    <th>Horas extras</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let asistencia of asistencias">
+                    <td>{{asistencia.fecha}}</td>
+                    <td>{{asistencia.asistenciaEntrada}}</td>
+                    <td>{{asistencia.asistenciaSalida}}</td>
+                    <td>{{asistencia.horasExtras}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

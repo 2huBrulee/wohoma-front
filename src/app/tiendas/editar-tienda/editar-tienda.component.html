@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <!-- añadir responsive col-**-num -->
+    <h1 class="text-white m-4">Editar Tienda</h1>
+  </div>
+</div>
+<div class="container bg-secondary p-2 text-center col-sm-6">
+  <form (ngSubmit)="editarTienda()">
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="nombreTienda" #direccion="ngModel" name="nombreTienda" [(ngModel)]="tienda.nombreTienda" placeholder="Dirección" required="">
+        </div>
+      </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Dirección</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="direccion" #direccion="ngModel" name="dirección" [(ngModel)]="tienda.direccion" placeholder="Dirección" required="">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Teléfono</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="telefono" #telefono="ngModel" name="telefono" [(ngModel)]="tienda.telefono" placeholder="Teléfono" required="">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Referencia</label>
+      <div class="col-sm-10">
+        <textarea class="form-control" id="referencia" name="referencia" #referencia="ngModel" [(ngModel)]="tienda.referencia" placeholder="Referencia"></textarea>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="form-group col-2">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </form>
+</div>
